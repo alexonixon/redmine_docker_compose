@@ -6,12 +6,16 @@ services:
           - "172.17.0.1:3306:3306"
        volumes:
        - "./.srv/docker/redmine/mysql:/var/lib/mysql"
+    web:
+       image: alexonixon/nginx
+       ports:
+          - "80:10080"
     redmine:
        depends_on:
           - db
        image: alexonixon/docker_redmine
        ports:
-          - "10080:80"
+          - "172.17.0.1:3128:80"
        volumes:
           - "./.srv/docker/redmine/redmine:/home/redmine/data"
        environment:
