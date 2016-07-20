@@ -1,0 +1,12 @@
+first_issue:
+  description: Some description for the issue
+  user: jonathan
+second_issue:
+  description: Second issue
+  user: jonathan
+third_issue:
+  description: Third issue
+  user: sam
+fourth_issue:
+  description: Fourth issue
+  user: sam

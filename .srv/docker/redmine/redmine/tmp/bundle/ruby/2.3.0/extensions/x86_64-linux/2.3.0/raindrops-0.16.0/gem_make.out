@@ -1,0 +1,29 @@
+current directory: /home/redmine/redmine/vendor/bundle/ruby/2.3.0/gems/raindrops-0.16.0/ext/raindrops
+/usr/bin/ruby2.3 -r ./siteconf20160719-1584-8eh7u1.rb extconf.rb
+checking for mmap() in sys/mman.h... yes
+checking for munmap() in sys/mman.h... yes
+checking for mremap() in sys/mman.h... yes
+checking for linux/tcp.h... yes
+checking for getpagesize() in unistd.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_io_blocking_region()... yes
+checking for GCC 4+ atomic builtins... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/redmine/redmine/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/raindrops-0.16.0/mkmf.log
+
+current directory: /home/redmine/redmine/vendor/bundle/ruby/2.3.0/gems/raindrops-0.16.0/ext/raindrops
+make "DESTDIR=" clean
+
+current directory: /home/redmine/redmine/vendor/bundle/ruby/2.3.0/gems/raindrops-0.16.0/ext/raindrops
+make "DESTDIR="
+compiling linux_tcp_info.c
+compiling raindrops.c
+compiling linux_inet_diag.c
+linking shared-object raindrops_ext.so
+
+current directory: /home/redmine/redmine/vendor/bundle/ruby/2.3.0/gems/raindrops-0.16.0/ext/raindrops
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 raindrops_ext.so ./.gem.20160719-1584-19ae8rj

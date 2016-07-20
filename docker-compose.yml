@@ -1,0 +1,21 @@
+version: '2'
+services:
+    db:
+       image: sameersbn/mysql
+       ports:
+          - "172.17.0.1:3306:3306"
+       volumes:
+       - "./.srv/docker/redmine/mysql:/var/lib/mysql"
+    redmine:
+       depends_on:
+          - db
+       image: alexonixon/docker_redmine
+       ports:
+          - "10080:80"
+       volumes:
+          - "./.srv/docker/redmine/redmine:/home/redmine/data"
+       environment:
+          DB_NAME: redmine
+          DB_USER: redmine
+          DB_HOST: 172.17.0.1
+          DB_PASS: 777
